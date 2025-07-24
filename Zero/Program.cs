@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Zero;
 using Zero.Components;
 using Zero.Components.Account;
 using Zero.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHostedService<Worker>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
